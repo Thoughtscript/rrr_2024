@@ -37,6 +37,13 @@ I performed the following to uprade my local Windows Ruby installation (from `3.
     # from within the /rails directory within this repo
     ```
 
+## Notes
+
+1. May need to the above with `bundle` locally on **Windows 11**.
+2. The default database in `postgres`.
+3. http://localhost:3000/ will display the Rails default app page.
+4. Run `rails new project` after an initial commit has been created in the parent directory - it'll cause commit issues otherwise since `rails` initializes a `.git` history.
+
 ## Resources and Links
 
 1. https://blog.eq8.eu/til/ruby-logs-and-puts-not-shown-in-docker-container-logs.html
