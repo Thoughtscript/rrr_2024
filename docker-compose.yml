@@ -1,0 +1,51 @@
+services:
+  postgres:
+    build:
+      context: ./postgres
+      dockerfile: dockerfile
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_PASSWORD="${POSTGRES_PASSWORD}"
+    networks:
+      - testnet
+    volumes:
+      - db-data:/var/lib/postgresql/data:delegated
+
+  rails:
+    build:
+      context: ./rails
+      dockerfile: dockerfile
+    ports:
+      - '3000:3000'
+    depends_on:
+      - postgres
+    networks:
+      - testnet
+    restart: unless-stopped
+
+  # react:
+  #   build:
+  #     context: ./react
+  #     dockerfile: dockerfile
+  #   ports:
+  #     - '5000:5000'
+  #   depends_on:
+  #     - rails
+  #   networks:
+  #     - testnet
+  #   restart: unless-stopped
+
+  ruby:
+    build:
+      context: ./ruby
+      dockerfile: dockerfile
+    networks:
+      - testnet
+
+volumes:
+  db-data:
+
+networks:
+  testnet:
+    driver: bridge

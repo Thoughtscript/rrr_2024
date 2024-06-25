@@ -1,0 +1,17 @@
+FROM ruby:3.3.3
+
+RUN echo "Creating working dir and copying files"
+RUN mkdir /app
+WORKDIR /app
+COPY . .
+
+RUN apt-get update
+RUN apt-get autoremove -y 
+RUN apt-get autoclean -y
+RUN apt-get upgrade
+
+RUN gem update
+RUN gem install bundler
+RUN cd web && bundle install
+
+CMD ["bash", "run.sh"]
