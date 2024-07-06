@@ -11,4 +11,4 @@ export const
     BASE_PATH = '/',
     HOME_PATH = '/home',
     API_PATH = '/api',
-    RAILS_API_URL = 'http://localhost:3000/examples/'
+    RAILS_API_URL = 'http://localhost:3000/examples/all'

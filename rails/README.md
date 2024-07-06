@@ -74,7 +74,8 @@ rails g controller Examples
 ## Endpoints
 
 1. http://localhost:3000/rails/info/routes
-2. http://localhost:3000/examples
+2. http://localhost:3000/examples/all
+3. http://localhost:3000/examples/1
 
 ## Helpful Resources
 
@@ -89,3 +90,6 @@ rails g controller Examples
 9. https://guides.rubyonrails.org/association_basics.html
 10. https://fullstackheroes.com/tutorials/rails/column-types/
 11. https://www.stackhawk.com/blog/rails-cors-guide/
+12. https://www.rubyguides.com/2019/04/rails-render/
+13. https://www.codegram.com/blog/routing-in-rails/
+14. https://guides.rubyonrails.org/routing.html

@@ -36,6 +36,15 @@ I performed the following to uprade my local Windows Ruby installation (from `3.
     rails new web
     # from within the /rails directory within this repo
     ```
+## Use
+
+```bash
+docker-compose up
+```
+
+> http://localhost:1234/api
+
+> http://localhost:3000/examples
 
 ## Notes
 
@@ -47,3 +56,7 @@ I performed the following to uprade my local Windows Ruby installation (from `3.
 ## Resources and Links
 
 1. https://blog.eq8.eu/til/ruby-logs-and-puts-not-shown-in-docker-container-logs.html
+2. https://www.rubyguides.com/2019/04/rails-render/
+3. https://www.stackhawk.com/blog/rails-cors-guide/
+4. https://www.codegram.com/blog/routing-in-rails/
+5. https://guides.rubyonrails.org/routing.html

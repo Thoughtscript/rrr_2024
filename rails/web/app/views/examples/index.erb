@@ -1,0 +1,21 @@
+<h1>Listing Examples</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @examples.each do |example| %>
+      <tr>
+        <td><%= example.id %></td>
+        <td><%= example.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

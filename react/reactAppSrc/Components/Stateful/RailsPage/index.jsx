@@ -16,7 +16,7 @@ export class RailsPage extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            dinos: [],
+            examples: [],
             ...this.props
         }
     }
@@ -26,8 +26,10 @@ export class RailsPage extends React.Component {
         // Check time and empty array.
         try {
             asyncGet(RAILS_API_URL).then(success => {
+                const parsed = JSON.parse(success)
+
                 this.setState({
-                    dinos: JSON.parse(success)
+                    examples: (parsed.length > 5) ? parsed.slice(0, 5) : parsed
                 })
             })
         } catch (ex) {
@@ -36,7 +38,7 @@ export class RailsPage extends React.Component {
     }
 
     render() {
-        const { dinos } = this.state
+        const { examples } = this.state
 
         return (
             <main className="landingPage">
@@ -52,7 +54,7 @@ export class RailsPage extends React.Component {
                         </thead>
                         <tbody>
                             {
-                                (dinos).map(p =>
+                                (examples).map(p =>
                                     <tr key={p.id}>
                                         <th>{p.id}</th>
                                         <th>{p.name}</th>
@@ -62,8 +64,6 @@ export class RailsPage extends React.Component {
                         </tbody>
                     </table>
                 </div>
-                
-                <UnsplashSection photo={'1705651460796-f4b4d74c9fea'} ixid={'M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}/>
             </main>
         )
     }

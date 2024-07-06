@@ -5,9 +5,15 @@ header {
     height: 90px;
     width: 100%;
     opacity:.9;
+    background: transparent;
+    border-bottom: 1px solid transparent;
+    box-shadow: 2px 5px 9px 5px transparent;
+}
+
+header:hover {
     border-bottom: 1px solid black;
     box-shadow: 2px 5px 9px 5px black;
-    background: transparent;
+    transition: 1s all;
 }
 
 header > h2 {

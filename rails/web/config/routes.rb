@@ -8,10 +8,20 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
 
-  get '/examples', to: 'examples#list'
+  get '/examples', to: 'examples#index'
+  get '/examples/all', to: 'examples#list'
   get '/examples/:id', to: 'examples#getOne'
-  get '/examples/subexamples/:id', to: 'examples#getSubExamples'
   post '/examples', to: 'examples#create'
+  put '/examples/:id', to: 'examples#update'
+  delete '/examples/:id', to: 'examples#delete'
 
-  resources :examples
+  delete '/examples/:id/subexamples/:sid', to: 'examples#deleteSubExample'
+  post '/subexamples', to: 'examples#createSubExample'
+  get '/examples/:id/subexamples', to: 'examples#getSubExamples'
+  get '/subexamples/:id', to: 'examples#getSubExample'
+  
+  resources :examples, :sub_examples
+  # The line above will automatically attempt to create several default mappings 
+  # Be forewarned that index and index.erb are mapped by default to /<MY_ENTITY>
+  ## (you can test that by commenting it out)
 end
