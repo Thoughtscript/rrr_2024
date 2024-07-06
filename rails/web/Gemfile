@@ -72,3 +72,6 @@ end
 
 # postgres
 gem 'pg', '~> 1.5', '>= 1.5.6'
+
+# cors
+gem 'rack-cors', '~> 1.1', '>= 1.1.1'

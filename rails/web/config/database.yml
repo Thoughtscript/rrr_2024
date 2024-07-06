@@ -45,3 +45,7 @@ development:
   <<: *default
   # database: appname_development
   database: postgres
+
+test:
+  <<: *default
+  database: postgres

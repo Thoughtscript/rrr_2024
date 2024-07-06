@@ -24,17 +24,17 @@ services:
       - testnet
     restart: unless-stopped
 
-  # react:
-  #   build:
-  #     context: ./react
-  #     dockerfile: dockerfile
-  #   ports:
-  #     - '5000:5000'
-  #   depends_on:
-  #     - rails
-  #   networks:
-  #     - testnet
-  #   restart: unless-stopped
+  react:
+    build:
+      context: ./react
+      dockerfile: dockerfile
+    ports:
+      - '1234:1234'
+    depends_on:
+      - rails
+    networks:
+      - testnet
+    restart: unless-stopped
 
   ruby:
     build:

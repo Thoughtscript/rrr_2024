@@ -8,6 +8,6 @@ COPY . .
 RUN apt-get update
 RUN apt-get autoremove -y 
 RUN apt-get autoclean -y
-RUN apt-get upgrade
+RUN apt-get upgrade -y
 
 CMD ["ruby", "main.rb"]

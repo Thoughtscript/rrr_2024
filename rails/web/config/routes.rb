@@ -7,4 +7,11 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+  get '/examples', to: 'examples#list'
+  get '/examples/:id', to: 'examples#getOne'
+  get '/examples/subexamples/:id', to: 'examples#getSubExamples'
+  post '/examples', to: 'examples#create'
+
+  resources :examples
 end
