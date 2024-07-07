@@ -2,5 +2,5 @@
 ## Note that $PROGRAM_NAME can be customized further
 
 if __FILE__ == $PROGRAM_NAME
-    puts 'Running Ruby Examples...'
+  puts 'hello world!'
 end

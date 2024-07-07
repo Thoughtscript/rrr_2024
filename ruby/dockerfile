@@ -10,4 +10,4 @@ RUN apt-get autoremove -y
 RUN apt-get autoclean -y
 RUN apt-get upgrade -y
 
-CMD ["ruby", "main.rb"]
+CMD ["bash", "run.sh"]

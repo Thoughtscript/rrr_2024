@@ -42,9 +42,9 @@ I performed the following to uprade my local Windows Ruby installation (from `3.
 docker-compose up
 ```
 
-> http://localhost:1234/api
-
-> http://localhost:3000/examples
+1. http://localhost:1234
+2. http://localhost:3000/rails/info/routes
+3. [API Endpoints](./rails/run.sh)
 
 ## Notes
 
