@@ -74,8 +74,7 @@ rails g controller Examples
 ## Endpoints
 
 1. http://localhost:3000/rails/info/routes
-2. http://localhost:3000/examples/all
-3. http://localhost:3000/examples/1
+2. [API Endpoints](./run.sh)
 
 ## Helpful Resources
 

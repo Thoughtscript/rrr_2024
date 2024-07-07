@@ -23,21 +23,21 @@ class ExamplesController < ApplicationController
 
   # POST /examples
   def create
-    jsonBodyName = request[:name]
-    example = Example.create!(:name => jsonBodyName)
+    # use params even to extract info from body
+    # https://guides.rubyonrails.org/action_controller_overview.html#json-parameters
+    example = Example.create!(name: params[:name])
     render json: example
   end
 
   # PUT /examples/:id
   def update
-    jsonBodyName = request[:name]
-    example = Example.update!(id: params[:id], :name => jsonBodyName)
+    example = Example.update(params[:id], :name => params[:name])
     render json: example
   end
 
   # DELETE /examples/:id
   def delete
-    example = Example.delete!(id: params[:id])
+    example = Example.delete(id: params[:id])
     render json: example
   end
 
@@ -49,19 +49,17 @@ class ExamplesController < ApplicationController
   # DELETE /examples/:id/subexamples/:sid
   def deleteSubExample
     example = Example.find_by!(id: params[:id])
-    example.sub_examples.delete(SubExample.find(id: params[:sid])) 
+    subExample = SubExample.find_by!(id: params[:sid])
+    example.sub_examples.delete(subExample) 
     # https://api.rubyonrails.org/v7.1.3.4/classes/ActiveRecord/Associations/CollectionProxy.html#method-i-delete
-
-    subExample = SubExample.delete!(id: params[:sid])
-    render json: subExample
+    render json: example.sub_examples
   end
 
   # POST /subexamples
   def createSubExample
-    jsonBodyName = request[:name]
-    jsonBodyExampleId = request[:id]
-    subExample = SubExample.create!(:name => jsonBodyName, :example_id => jsonBodyExampleId)
-    render json: subExample
+    example = Example.find_by!(id: params[:example_id])
+    example.sub_examples.create!(name: params[:name], example_id: params[:example_id])
+    render json: example.sub_examples
   end
 
   # GET /examples/:id/subexamples
