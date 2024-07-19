@@ -44,7 +44,7 @@ docker-compose up
 
 1. http://localhost:1234
 2. http://localhost:3000/rails/info/routes
-3. [API Endpoints](./rails/run.sh)
+3. [API Endpoints](test_curl.sh)
 
 ## Notes
 
