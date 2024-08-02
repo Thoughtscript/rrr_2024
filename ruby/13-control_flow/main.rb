@@ -28,7 +28,7 @@ raise Exception unless (1 == 1)
 
 unless (1 == 1)
   p "identity is not equivalence - math has broken!"
-  raise Exception
+  raise Exception # Should generally prefer to check for StdErr
 end
 p "the universe hasn't shattered in two"
 
@@ -36,7 +36,7 @@ p "the universe hasn't shattered in two"
 
 begin
   raise Exception.new "I am thrown"
-rescue Exception
+rescue Exception # Should generally prefer to check for StdErr
   p "I am caught"
 end
 
@@ -44,6 +44,6 @@ end
 
 begin
   raise Exception.new "I am thrown"
-rescue => e
+rescue Exception => e # Should generally prefer to check for StdErr
   p e.backtrace
 end
