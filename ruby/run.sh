@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-ruby main.rb &&
+echo "..." && ruby main.rb &&
 echo "================ 1-main_method ================" && ruby 1-main_method/main.rb &&
 echo "================ 2-methods ================" && ruby 2-methods/main.rb &&
 echo "================ 3-dependencies ================" && ruby 3-dependencies/main.rb &&
