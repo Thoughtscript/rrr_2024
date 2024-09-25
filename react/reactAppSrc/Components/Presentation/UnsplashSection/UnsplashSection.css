@@ -1,6 +1,6 @@
 .unsplash {
     width: 50%;
-    height: 1200px;
+    /*height: 1200px;*/
     z-index:-999;
     background-size:cover;
     background-repeat:no-repeat;
