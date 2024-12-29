@@ -56,8 +56,8 @@ export class RailsPage extends React.Component {
                             {
                                 (examples).map(p =>
                                     <tr key={p.id}>
-                                        <th>{p.id}</th>
-                                        <th>{p.name}</th>
+                                        <td>{p.id}</td>
+                                        <td>{p.name}</td>
                                     </tr>
                                 )
                             }

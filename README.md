@@ -40,6 +40,9 @@ I performed the following to uprade my local Windows Ruby installation (from `3.
 
 ```bash
 docker-compose up
+
+# If using: Docker Compose Engine V2
+docker compose up 
 ```
 
 1. http://localhost:1234
