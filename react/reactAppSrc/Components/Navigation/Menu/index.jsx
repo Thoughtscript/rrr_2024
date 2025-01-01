@@ -14,34 +14,31 @@ let w = window.location.pathname
 
 export class Menu extends React.Component {
     constructor(props) {
-        super(props);
-        this.home = React.createRef();
-        this.api = React.createRef();
+        super(props)
+        this.home = React.createRef()
+        this.api = React.createRef()
+        this.state = {
+            active: BASE_PATH
+        }
     }
 
     render() {
+        const { active } = this.state
+
         return (
             <nav>
                 <ul>
                     <li className="home">
-                        <Link onClick={() => {
-                            w = BASE_PATH;
-                            this.home.current.className = 'active';
-                            this.api.current.className = 'inactive';
-                        }}
+                        <Link onClick={() => { this.setState({ active: HOME_PATH }) }}
                             ref={this.home}
-                            className={(w === BASE_PATH || w === HOME_PATH) ? 'active' : 'inactive'}
-                            to={BASE_PATH}>Home</Link>
+                            className={(active === BASE_PATH || active === HOME_PATH) ? 'active' : 'inactive'}
+                            to={HOME_PATH}>Home</Link>
                     </li>
 
                     <li className="api">
-                        <Link onClick={() => {
-                            w = BASE_PATH;
-                            this.home.current.className = 'inactive';
-                            this.api.current.className = 'active';
-                        }}
+                        <Link onClick={() => { this.setState({ active: API_PATH }) }}
                             ref={this.api}
-                            className={(w === API_PATH) ? 'active' : 'inactive'}
+                            className={(active === API_PATH) ? 'active' : 'inactive'}
                             to={API_PATH}>API</Link>
                     </li>
                 </ul>
