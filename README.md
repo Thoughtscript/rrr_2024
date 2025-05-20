@@ -1,6 +1,6 @@
 # rrr_2024
 
-[![](https://img.shields.io/badge/React-18.3.1-orange.svg)](https://reactjs.org) [![](https://img.shields.io/badge/parcel-2.12.0-royalblue.svg)](https://parceljs.org/) [![](https://img.shields.io/badge/Node.js-16.17.0-yellowgreen.svg)](https://nodejs.org/en/) [![](https://img.shields.io/badge/Ruby-3.3.3-red.svg)](https://www.ruby-lang.org/en/) [![](https://img.shields.io/badge/Rails-7.1.3.4-red.svg)](https://rubyonrails.org/) [![](https://img.shields.io/badge/Docker-blue.svg)](https://www.docker.com/) [![](https://img.shields.io/badge/Postgres-16.2-lightblue.svg)](https://hub.docker.com/_/postgres)
+[![](https://img.shields.io/badge/React-18.3.1-orange.svg)](https://reactjs.org) [![](https://img.shields.io/badge/parcel-2.15.1-royalblue.svg)](https://parceljs.org/) [![](https://img.shields.io/badge/Node.js-23.11.1-yellowgreen.svg)](https://nodejs.org/en/) [![](https://img.shields.io/badge/Ruby-3.3.3-red.svg)](https://www.ruby-lang.org/en/) [![](https://img.shields.io/badge/Rails-7.1.3.4-red.svg)](https://rubyonrails.org/) [![](https://img.shields.io/badge/Docker-blue.svg)](https://www.docker.com/) [![](https://img.shields.io/badge/Postgres-16.2-lightblue.svg)](https://hub.docker.com/_/postgres)
 
 ## Local Setup
 
